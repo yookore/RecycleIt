@@ -103,6 +103,7 @@ public class StreamActivityFragment extends Fragment implements EndlessRecyclerV
                 User user = new User(userJson.getString("name"),
                         userJson.getString("profileurl"),
                         userJson.getBoolean("online"));
+                    user.setType((i%2 == 0 ? "post" : "photo"));
                 users.add(user);
 
             }
@@ -133,7 +134,7 @@ public class StreamActivityFragment extends Fragment implements EndlessRecyclerV
                 loadMoreItems();
 
             }
-        },100);
+        },0);
 
 
         Log.d(TAG, "We have been called to supply data");

@@ -7,6 +7,7 @@ public class User {
     private String name;
     private String profileurl;
     private boolean online;
+    private String type;
 
     public User(String name, String profileurl, boolean online) {
         this.name = name;
@@ -39,5 +40,23 @@ public class User {
 
     public void setOnline(boolean online) {
         this.online = online;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", profileurl='" + profileurl + '\'' +
+                ", online=" + online +
+                ", type='" + type + '\'' +
+                '}';
     }
 }
